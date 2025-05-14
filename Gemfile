@@ -19,6 +19,8 @@ gem "jbuilder"
 
 gem "devise"
 
+gem 'sassc-rails'
+
 gem 'tty-spinner'
 
 gem 'rails-i18n', '~> 7.0.0'
