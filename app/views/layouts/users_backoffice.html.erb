@@ -13,12 +13,50 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "users_backoffice", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <h1>LAYOUT USERS BACKOFFICE</h1>
-    <%= yield %>
+    <!-- Nav da página -->
+     
+    <nav>
+      <!-- Botão do DashBoard Admin -->
+
+      <div class="nav_top_container">
+        <div class="text_user">
+          <p>SCHOOL TEST</p>
+        </div>
+        <div class="botoes_container">
+          <%= link_to 'Dashboard', admins_backoffice_welcome_index_path, class: 'botoes_user' %>
+          <%= link_to 'Dashboard', admins_backoffice_welcome_index_path, class: 'botoes_user' %>
+          <%= link_to 'Dashboard', admins_backoffice_welcome_index_path, class: 'botoes_user' %>
+        </div>
+      </div>
+      <!-- Logout -->
+      <div class="logout_user">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= image_tag 'box-arrow-left.svg' %>
+        Sair
+        <% end %>
+      </div>
+    </nav>
+
+    <!-- Content que engloba tudo -->
+
+    <div class="content">
+      <header>
+        <div class="title-header-user">
+          <h1>Painel do Usuário</h1>
+        </div>
+        <div class="camp-user">
+          <%= current_user.email %>
+          <div class="camp-user-image"><%= image_tag 'person-circle.svg', size: "25x25" %></div>
+        </div>
+      </header>
+      <main>
+        <div class="main-central"><%= yield %></div>
+      </main>
+    </div>
   </body>
 </html>
