@@ -21,6 +21,8 @@ gem "devise"
 
 gem 'sassc-rails'
 
+gem 'faker'
+
 gem 'tty-spinner'
 
 gem 'rails-i18n', '~> 7.0.0'
@@ -56,6 +58,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem 'awesome_print'
 end
 
 group :test do
