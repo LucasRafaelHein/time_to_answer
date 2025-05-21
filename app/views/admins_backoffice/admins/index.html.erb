@@ -3,12 +3,15 @@
 
 <h1>Admins</h1>
 
+<hr>
+
 <div class="table_adm">
     <table>
         <thead>
             <tr>
                 <th>#</th>
                 <th>Email</th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -17,9 +20,15 @@
             <tr>
                 <td> <%= admin.id %> </td>
                 <td> <%= admin.email %> </td>
-                <td style="width: 100px;">
-                    <button class="table_button_admin"><%= image_tag 'pencil-duotone', size: "25x25" %></button>
-                    <button class="table_button_admin"><%= image_tag 'trash-duotone', size: "25x25" %></button>
+                <td style="width: 20px;">
+                    <%= link_to edit_admins_backoffice_admin_path(admin), class: "table_button_admin" do %>
+                        <%= image_tag 'pencil-duotone', size: "25x25" %>
+                    <% end %>
+                </td>
+                <td style="width: 20px;">
+                    <%= link_to edit_admins_backoffice_admin_path(admin), class: "table_button_admin" do %>
+                        <%= image_tag 'trash-duotone', size: "25x25" %>
+                    <% end %>
                 </td>
             </tr>
             <% end %>
