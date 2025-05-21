@@ -30,7 +30,7 @@
                     <% end %>
                 </td>
                 <td style="width: 20px;">
-                    <%= link_to edit_admins_backoffice_admin_path(admin), class: "table_button_admin" do %>
+                    <%= link_to admins_backoffice_admin_path(admin), method: :delete, class: "table_button_admin", data: { confirm: "Deseja realmente excluir o Administrador"} do %>
                         <%= image_tag 'trash-duotone', size: "25x25" %>
                     <% end %>
                 </td>
