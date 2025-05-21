@@ -19,5 +19,26 @@
 
   <body>
     <%= yield %>
+    <script type="module">
+      import Swal from 'sweetalert2'
+
+      <% if notice %>
+        Swal.fire({
+          icon: 'success',
+          title: '<%= j notice %>',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      <% end %>
+
+      <% if alert %>
+        Swal.fire({
+          icon: 'error',
+          title: '<%= j alert %>',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      <% end %>
+    </script>
   </body>
 </html>
