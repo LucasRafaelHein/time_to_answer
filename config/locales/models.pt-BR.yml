@@ -7,16 +7,19 @@
       user:
         one: Usuário
         other: Usuários
+      subject:
+        one: Assunto
+        other: Assuntos
     attributes:
-      admin:
+      defaults:
         id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+      admin:
         email: Email
         password: Senha
         password_confirmation: Confirmação da Senha
-        created_at: Criado em
-        updated_at: Atualizado em
       user:
-        id: Código
         email: Email
-        created_at: Criado em
-        updated_at: Atualizado em
+      subject:
+        description: Descrição
