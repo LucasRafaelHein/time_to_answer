@@ -10,7 +10,7 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Email</th>
+                <th><%= translate_attribute(@admins, :email) %></th>
                 <th class="add_admin">
                     <%= link_to new_admins_backoffice_admin_path, class: "table_button_admin" do %>
                         <%= image_tag 'user-plus', size: "25x25" %>

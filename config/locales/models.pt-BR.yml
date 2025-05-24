@@ -10,6 +10,9 @@
       subject:
         one: Assunto
         other: Assuntos
+      question:
+        one: Pergunta
+        other: Perguntas
     attributes:
       defaults:
         id: Código
@@ -23,3 +26,7 @@
         email: Email
       subject:
         description: Descrição
+      question:
+        description: Descrição
+        subject: Assunto
+        subject_id: Assunto

@@ -10,8 +10,8 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Descrição</th>
-                <th>Assunto</th>
+                <th><%= translate_attribute(@questions, :description) %></th>
+                <th><%= translate_attribute(@questions, :subject) %></th>
                 <th class="add_admin">
                     <%= link_to new_admins_backoffice_question_path, class: "table_button_admin" do %>
                         <%= image_tag 'user-plus', size: "25x25" %>
