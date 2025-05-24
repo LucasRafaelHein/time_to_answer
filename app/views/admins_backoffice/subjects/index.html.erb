@@ -1,7 +1,7 @@
 <!-- Os comandos utilizados foram:  rails g controller AdminsBackoffice::Admins index -->
 <%= stylesheet_link_tag "admins_backoffice_admin", "data-turbo-track": "reload" %>
 
-<h1><%= t('messages.listing', model: @subjects.model_name.human(count: 2)) %></h1>
+<h1><%= t('message.listing', model: @subjects.model_name.human(count: 2)) %></h1>
 
 <hr>
 
@@ -30,7 +30,7 @@
                     <% end %>
                 </td>
                 <td style="width: 20px;">
-                    <%= link_to admins_backoffice_subject_path(subject), method: :delete, class: "table_button_admin", data: { confirm: t('messages.confirm_with', item: subject.description) }  do %>
+                    <%= link_to admins_backoffice_subject_path(subject), method: :delete, class: "table_button_admin", data: { confirm: t('message.confirm_with', item: subject.description) }  do %>
                         <%= image_tag 'trash-duotone', size: "25x25" %>
                     <% end %>
                 </td>

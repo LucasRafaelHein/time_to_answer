@@ -8,7 +8,7 @@
 
         <div class="form-group">
             <%= form.label :description %>
-            <%= form.text_area :description, class:"form-control", placeholder:"Descrição da pergunta", rows: 5 %>
+            <%= form.text_area :description, class:"form-control", placeholder: t('placeholder.question_description'), rows: 5 %>
         </div>
 
         <div class="form-group">
@@ -16,6 +16,8 @@
             <%= form.collection_select(:subject_id, @subjects, :id, :description) %>
         </div>
         
-        <button type="submit">Salvar</button>
+        <button type="submit">
+            <%= t('buttons.save') %>
+        </button>
     <% end %>
 </div>
