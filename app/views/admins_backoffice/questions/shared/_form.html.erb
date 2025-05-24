@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <%= form.label :subject_id %>
-            <%= form.collection_select(:subject_id, Subject.all, :id, :description) %>
+            <%= form.collection_select(:subject_id, @subjects, :id, :description) %>
         </div>
         
         <button type="submit">Salvar</button>
